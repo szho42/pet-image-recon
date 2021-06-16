@@ -1,5 +1,11 @@
-The default configuration of the reconstruction is in the **config.py**, which can be modified for different settings.
+This work relies on the SIRF and STIR reconstruction frameworks. Please refer to their offical repositories:
+* https://github.com/SyneRBI/SIRF
+* https://github.com/UCL/STIR
 
+It is recommended to use SIRF-SuperBuild to set up the enviornment (https://github.com/SyneRBI/SIRF-SuperBuild).
+
+**Configuration**
+The default configuration of the reconstruction is in the **config.py**, which can be modified for different settings.
 
 **How to reconstruct from list mode**
 the script **recon_pet.py** is the main function for reconstrucing listmode into PET images.
@@ -13,7 +19,7 @@ the arguments are:
 * count_threshold: a value set for identifying the real start time, usually with a very small number, e.g. 10 and 20. In some data exported from scanner, the start time might not be 0, instead a random number. This threshold needs to set, to get the right time window with start_time and offset.
 * output_prefix: the prefix for the result images, saved in nifti format.
 
-** Example **
+**Example**
 The below example shows the scripts used to i) create a template, where the scanner related information can be set; ii) reconstruct the PET image.
 
 (1) Create template
